@@ -185,9 +185,15 @@
 <h2 id="2-在根目录中安装hexo"><a href="#2-在根目录中安装hexo" class="headerlink" title="2.在根目录中安装hexo"></a>2.在根目录中安装hexo</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm insatll hexo-<span class="keyword">cli</span> -g</span><br></pre></td></tr></table></figure>
 <h2 id="3-创建文件夹并在该目录下安装hexo"><a href="#3-创建文件夹并在该目录下安装hexo" class="headerlink" title="3.创建文件夹并在该目录下安装hexo"></a>3.创建文件夹并在该目录下安装hexo</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mkdir</span> hexoblog       <span class="comment">//mkdir是创建文件夹命令</span></span><br><span class="line"><span class="keyword">cd</span> hexoblog          <span class="comment">//cd是切换文件夹命令</span></span><br><span class="line">hexo init            <span class="comment">//初始化hexo</span></span><br><span class="line">hexo <span class="keyword">g</span>               <span class="comment">//生成hexo静态页面</span></span><br><span class="line">hexo s               <span class="comment">//打开本地服务网站</span></span><br></pre></td></tr></table></figure> 
 <p>上述代码执行完成后，即可在浏览器地址栏写上’localhost:4000’即可打开创建的网页</p>
-<h2 id="4-hexo部署到github"><a href="#4-hexo部署到github" class="headerlink" title="4.hexo部署到github"></a>4.hexo部署到github</h2><p>先在github中登录一个账号，然后再新建一个仓库（注意将页面设置为电脑页面）<br><img src="https://s2.ax1x.com/2019/08/27/m5Cl6K.jpg" alt="m5Cl6K.jpg"><br>仓库名格式：github用户名.github.io。再将下图所示的选项勾上<br>（下图中的报错信息是由于作者在之前就已经创建了一个同名仓库）<br><img src="https://s2.ax1x.com/2019/08/27/m5C06f.jpg" alt="m5C06f.jpg"><br>配置git用户信息<br>若没有git命令则用pkg install git安装<br>下面第三条命令需要openssh，使用pkg insatll openssh安装</p>
+<h2 id="4-hexo部署到github"><a href="#4-hexo部署到github" class="headerlink" title="4.hexo部署到github"></a>4.hexo部署到github</h2><h4 id="先在github中登录一个账号，然后再新建一个仓库（注意将页面设置为电脑页面）"><a href="#先在github中登录一个账号，然后再新建一个仓库（注意将页面设置为电脑页面）" class="headerlink" title="先在github中登录一个账号，然后再新建一个仓库（注意将页面设置为电脑页面）"></a>先在github中登录一个账号，然后再新建一个仓库（注意将页面设置为电脑页面）</h4><p><img src="https://s2.ax1x.com/2019/08/27/m5Cl6K.jpg" alt="m5Cl6K.jpg"><br>仓库名格式：github用户名.github.io。再将下图所示的选项勾上<br>（下图中的报错信息是由于作者在之前就已经创建了一个同名仓库）<br><img src="https://s2.ax1x.com/2019/08/27/m5C06f.jpg" alt="m5C06f.jpg"></p>
+<h4 id="配置git用户信息"><a href="#配置git用户信息" class="headerlink" title="配置git用户信息"></a>配置git用户信息</h4><p>若没有git命令则用pkg install git安装<br>下面第三条命令需要openssh，使用pkg insatll openssh安装</p>
 <figure class="highlight routeros"><figcaption><span>syntax</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">"GitHub用户名"</span></span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">"GitHub邮箱"</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"Github邮箱”"</span></span><br></pre></td></tr></table></figure>
-
+<p>上面的第三条代码可能会报错<br>报错后直接</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssh-keygen</span> </span><br></pre></td></tr></table></figure>
+<p>会有如下提示<br><img src="https://s2.ax1x.com/2019/08/28/mHsMX8.jpg" alt="mHsMX8.jpg"><br>然后将生成的公钥文件复制到sd卡中<br><img src="https://s2.ax1x.com/2019/08/28/mH68Wn.jpg" alt="mH68Wn.jpg"><br>cp命令格式：cp 当前文件路径 目标文件路径<br>这里的目标路径是全路径<br>然后进入github设置：<br><img src="https://s2.ax1x.com/2019/08/28/mH2Ss0.jpg" alt="mH2Ss0.jpg"><br>打开ssh选项,选择New ssh keygen：<br><img src="https://s2.ax1x.com/2019/08/29/mbSI4e.jpg" alt="mbSI4e.jpg"><br>将公钥文件中的信息复制到key中（标题随意）：<br><img src="https://s2.ax1x.com/2019/08/29/mbST9H.jpg" alt="mbST9H.jpg"><br>然后再到hexo的根目录下修改<strong>__config.yml的内容：<br>输入vim __</strong>config.yml编译该文件<br>将下面选项作修改：<br>repo的格式：<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:用户名/用户名.github.io<br><img src="https://s2.ax1x.com/2019/08/29/mbpe5F.jpg" alt="mbpe5F.jpg"><br>其他的和上面一样修改即可<br>再输入ssh <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>进行验证<br>若出现下面的提示则配置成功：<br><img src="https://s2.ax1x.com/2019/08/29/mbpgPg.jpg" alt="mbpgPg.jpg"><br>hexo的配置就完成了<br>输入：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo g</span></span><br><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure>
+<p>提交本地hexo到github，之后可以通过 用户名.github.io访问博客</p>
+<h2 id="5-hexo使用时报错"><a href="#5-hexo使用时报错" class="headerlink" title="5.hexo使用时报错"></a>5.hexo使用时报错</h2>
     </div>
 </div>
 
@@ -334,12 +340,12 @@
         
         
         <div class="cube-box ">
-            <a href="/tags/资源获取/">#-资源获取</a>
+            <a href="/tags/termux-hexo/">#-termux -hexo</a>
         </div>
         
         
         <div class="cube-box ">
-            <a href="/tags/termux-hexo/">#-termux -hexo</a>
+            <a href="/tags/资源获取/">#-资源获取</a>
         </div>
         
     </div>
