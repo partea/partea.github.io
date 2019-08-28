@@ -180,8 +180,14 @@
     <div class="cube-article-content cube-markdown">
         
         <h2 id="需要的准备："><a href="#需要的准备：" class="headerlink" title="需要的准备："></a>需要的准备：</h2><p>termux（可以在F-droid中下载）</p>
-<h3 id="ps：当按步骤进行时遇到一定问题，则需要了解linux的基本命令。本教程的hexo都是在data-data的文件夹下，而在一般的文件管理器中，data文件夹是不可见的。如果想要将hexo目录放在手机中其他地方，就需要root权限。"><a href="#ps：当按步骤进行时遇到一定问题，则需要了解linux的基本命令。本教程的hexo都是在data-data的文件夹下，而在一般的文件管理器中，data文件夹是不可见的。如果想要将hexo目录放在手机中其他地方，就需要root权限。" class="headerlink" title="ps：当按步骤进行时遇到一定问题，则需要了解linux的基本命令。本教程的hexo都是在data/data的文件夹下，而在一般的文件管理器中，data文件夹是不可见的。如果想要将hexo目录放在手机中其他地方，就需要root权限。"></a>ps：当按步骤进行时遇到一定问题，则需要了解linux的基本命令。本教程的hexo都是在data/data的文件夹下，而在一般的文件管理器中，data文件夹是不可见的。如果想要将hexo目录放在手机中其他地方，就需要root权限。</h3><h2 id="1-安装nodejs："><a href="#1-安装nodejs：" class="headerlink" title="1.安装nodejs："></a>1.安装nodejs：</h2><figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
-<h2 id="2-创建文件夹并在该目录下安装hexo"><a href="#2-创建文件夹并在该目录下安装hexo" class="headerlink" title="2.创建文件夹并在该目录下安装hexo"></a>2.创建文件夹并在该目录下安装hexo</h2>
+<h3 id="ps：当按步骤进行时遇到一定问题，则需要了解linux的基本命令。本教程的hexo都是在data-data的文件夹下，而在一般的文件管理器中，data文件夹是不可见的。如果想要将hexo目录放在手机中其他地方，就需要root权限。"><a href="#ps：当按步骤进行时遇到一定问题，则需要了解linux的基本命令。本教程的hexo都是在data-data的文件夹下，而在一般的文件管理器中，data文件夹是不可见的。如果想要将hexo目录放在手机中其他地方，就需要root权限。" class="headerlink" title="ps：当按步骤进行时遇到一定问题，则需要了解linux的基本命令。本教程的hexo都是在data/data的文件夹下，而在一般的文件管理器中，data文件夹是不可见的。如果想要将hexo目录放在手机中其他地方，就需要root权限。"></a>ps：当按步骤进行时遇到一定问题，则需要了解linux的基本命令。本教程的hexo都是在data/data的文件夹下，而在一般的文件管理器中，data文件夹是不可见的。如果想要将hexo目录放在手机中其他地方，就需要root权限。</h3><h2 id="1-安装nodejs："><a href="#1-安装nodejs：" class="headerlink" title="1.安装nodejs："></a>1.安装nodejs：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg insatll nodejs</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-在根目录中安装hexo"><a href="#2-在根目录中安装hexo" class="headerlink" title="2.在根目录中安装hexo"></a>2.在根目录中安装hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm insatll hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h2 id="3-创建文件夹并在该目录下安装hexo"><a href="#3-创建文件夹并在该目录下安装hexo" class="headerlink" title="3.创建文件夹并在该目录下安装hexo"></a>3.创建文件夹并在该目录下安装hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir hexoblog       //mkdir是创建文件夹命令</span><br><span class="line">cd hexoblog          //cd是切换文件夹命令</span><br><span class="line">hexo init            //初始化hexo</span><br><span class="line">hexo g               //生成hexo静态页面</span><br><span class="line">hexo s               //打开本地服务网站</span><br></pre></td></tr></table></figure> 
+<p>上述代码执行完成后，即可在浏览器地址栏写上’localhost:4000’即可打开创建的网页</p>
+<h2 id="4-hexo部署到github"><a href="#4-hexo部署到github" class="headerlink" title="4.hexo部署到github"></a>4.hexo部署到github</h2><p>先在github中登录一个账号，然后再新建一个仓库（注意将页面设置为电脑页面）<br><img src="https://s2.ax1x.com/2019/08/27/m5Cl6K.jpg" alt="m5Cl6K.jpg"><br>仓库名格式：github用户名.github.io。再将下图所示的选项勾上<br>（下图中的报错信息是由于作者在之前就已经创建了一个同名仓库）<br><img src="https://s2.ax1x.com/2019/08/27/m5C06f.jpg" alt="m5C06f.jpg"><br>配置git用户信息<br>若没有git命令则用pkg install git安装<br>下面第三条命令需要openssh，使用pkg insatll openssh安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;GitHub邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;Github邮箱”&quot;</span><br></pre></td></tr></table></figure>
+
     </div>
 </div>
 
@@ -328,12 +334,12 @@
         
         
         <div class="cube-box ">
-            <a href="/tags/termux-hexo/">#-termux -hexo</a>
+            <a href="/tags/资源获取/">#-资源获取</a>
         </div>
         
         
-        <div class="cube-box-bg ">
-            <a href="/tags/资源获取/">#-资源获取</a>
+        <div class="cube-box ">
+            <a href="/tags/termux-hexo/">#-termux -hexo</a>
         </div>
         
     </div>
