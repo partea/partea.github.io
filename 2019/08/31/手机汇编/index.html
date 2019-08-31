@@ -10,7 +10,7 @@
     
     
     
-    <title>Archives | Hexo</title>
+    <title>手机汇编 | Hexo</title>
     <!-- inject:style -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <!-- endinject -->
@@ -160,54 +160,52 @@
     
     <div class="cube-content">
         <div class="cube-left">
-            <style>
-    @media(max-width: 768px) {
-        body {
-            background-color: #fff!important;
-        }
-    }
-</style>
-<div class="cube-archives">
+            <div class="cube-article">
+    <h1 class="title">手机汇编</h1>
     
-        
-        <div class="cube-archive" style="margin-top: 0;">
-            
-                
-                   
-                            <h1 class="title">2019</h1>
-                            <ul class="posts">
-                   
-                            <li class="post">
-                                <a href="/2019/08/31/手机汇编/">手机汇编</a>
-                            </li>
-                
-            
-                
-                   
-                            <li class="post">
-                                <a href="/2019/08/27/在termux中搭建hexo博客/">在termux中搭建hexo博客</a>
-                            </li>
-                
-            
-                
-                   
-                            <li class="post">
-                                <a href="/2019/08/26/获取网站视频/">获取网站视频</a>
-                            </li>
-                
-            
-                
-                   
-                            <li class="post">
-                                <a href="/2019/08/26/hello-world/">Hello World</a>
-                            </li>
-                
-            
-                    </ul>
-                        </div>
-        
+    <div class="cube-article-header">
+        <div class="cube-article-date">
+            <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+            <!-- moment.js对象 -->
+            2019-08-31
+        </div>
+        <div class="cube-article-tags">
+    <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+    
+    <a href="/tags/汇编/">#-汇编</a>
     
 </div>
+    </div>
+    
+    <div class="cube-article-content cube-markdown">
+        
+        <h1 id="使用Dos模拟器进行汇编"><a href="#使用Dos模拟器进行汇编" class="headerlink" title="使用Dos模拟器进行汇编"></a>使用Dos模拟器进行汇编</h1><h4 id="需要的准备："><a href="#需要的准备：" class="headerlink" title="需要的准备："></a>需要的准备：</h4><p>dos模拟器</p>
+<h2 id="1-创建相关文件夹及文件"><a href="#1-创建相关文件夹及文件" class="headerlink" title="1.创建相关文件夹及文件"></a>1.创建相关文件夹及文件</h2><p>在手机根目录中创建masm文件夹，并在masm文件夹下创建需要编程的文件（以.asm结尾）此处我们创建的是ok.asm</p>
+<h2 id="2-在Dos模拟器中编译文件"><a href="#2-在Dos模拟器中编译文件" class="headerlink" title="2.在Dos模拟器中编译文件"></a>2.在Dos模拟器中编译文件</h2><p>先在dos中输入cd masm进入文件夹<br>再输入命令masm ok编译该文件，编译完成后可生成ok.obj文件<br>然后输入link ok链接该文件，生成ok.exe文件<br>最后输入ok.exe执行该文件</p>
+<h2 id="3-debug的使用"><a href="#3-debug的使用" class="headerlink" title="3.debug的使用"></a>3.debug的使用</h2><p>以ok.exe为例：<br>输入debug ok.exe进行debug<br>在debug中输入t开始跟踪ok.exe的执行<br>随后输入p逐条执行相应命令</p>
+
+    </div>
+</div>
+
+<div class="cube-article-nav">
+    <ul>
+        
+        
+        <li class="next">
+            <a href="/2019/08/27/在termux中搭建hexo博客/">
+                在termux中搭建hexo博客
+                <i class="cube-icon cube-next" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+<!-- TODO 根据theme.comment的内容进行入口选择 -->
+
+
+
         </div>
         <div class="cube-right">
             
@@ -344,7 +342,7 @@
     <div class="cube-boxs">
         
         
-        <div class="cube-box-bg ">
+        <div class="cube-box ">
             <a href="/tags/汇编/">#-汇编</a>
         </div>
         
